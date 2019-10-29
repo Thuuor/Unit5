@@ -31,4 +31,17 @@ public class SwitchBoard {
 			System.out.println(calls[position]);
 		}
 	}
+	
+	public int getNumRegisterCall() {
+		return numCall;
+	}
+	
+	public double getTurnover() {
+		double turnover = 0;
+		for(int i = 0;i < numCall;i++) {
+			turnover += calls[i].getCost();
+		}
+		return turnover;
+	}
+	
 }
