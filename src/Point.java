@@ -45,4 +45,13 @@ public class Point {
 		y += offY;
 	}
 	
+	public static double distance(Point p1, Point p2) {
+		int c1 = p2.getX() - p1.getX();
+		int c2 = p2.getY() - p1.getY();
+		
+		double distance = Math.sqrt(Math.pow(c1, 2) + Math.pow(c2, 2));
+		
+		return distance;
+	}
+	
 }
