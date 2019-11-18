@@ -93,12 +93,15 @@ public class MyPolynomial {
 
 	public MyPolynomial multiply(MyPolynomial p) {
 		
-		double[] result = 
-				new double[coeffs.length + p.coeffs.length - 1];
+		double[] result = new double[coeffs.length + p.coeffs.length - 1];
 
+		for (int i = 0;i < result.length;i++) {
+			result[i] = 0;
+		}
+		
 		for (int i = 0; i < coeffs.length;i++) {
 			for (int j = 0; j < p.coeffs.length;j++) {
-				result[i+j] = coeffs[i] * p.coeffs[j];
+				result[i+j] += coeffs[i] * p.coeffs[j];
 			}
 			
 		}
